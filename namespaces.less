@@ -1,0 +1,41 @@
+// 1.
+// Use namespaces to organize related functions
+// ex: Setting up a toolbelt for typography on your site
+
+
+
+@serif_stack: ~'"Lucida Grande", "Verdana", serif';
+@mono_stack:  ~'"Monaco", "Courier New", monospace';
+@sans_stack:  ~'"Helvetica Neue", Helvetica, Arial, sans-serif';
+
+// Functions for things we'll need to use frequently
+#type {
+    .display-strictly ()   { font-style: normal; font-weight: normal;  }
+    .hide-text ()          { text-indent: -99999px;                    }
+    .auto-kern ()          { text-rendering: optimizeLegibility;       }
+    .fix-webkit-display () { -webkit-font-smoothing: antialiased;      }
+}
+
+// Font stacks
+#font-family {
+    .sans  ()      { font-family: 'PTSansRegular',     @sans_stack;  }
+    .serif ()      { font-family: 'PTSansNarrow',      @serif_stack; }
+    .mono  ()      { font-family: 'Menlo',             @mono_stack;  }
+    .serif-bold () { font-family: 'PTSansNarrowBold',  @serif_stack; }
+}
+
+
+// Now to use them in anger :)
+h1, h2 {
+    #font-family > .sans();
+    #type > .hide-text();
+}
+code, pre {
+    #font-family > .mono();
+}
+.graphic-element {
+    #type > .hide-text();
+}
+
+// See @fat's collection of background mixins for an example
+// of just how far you can take this ---> http://is.gd/6YM9jh

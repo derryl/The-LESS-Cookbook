@@ -1,0 +1,57 @@
+// 1.
+// Generic nesting
+h1 {
+    color: #333;
+    font-family: serif;
+    span { display: inline-block; }
+    a    { text-decoration: none; }
+}
+
+// 2.
+// use '&' to reverse selection order and target the parent
+a.link {
+    color: blue;
+    li:hover & {
+        color: red;
+    }
+}
+
+// 3.
+// Use '& + &' to generate all possible subsequence selectors
+li, a, h1 {
+    & + & {
+        margin-top: 5px;
+    }
+}
+
+
+// 4.
+// Nest media queries for maximum concision
+.responsive {
+    @media @landscape  { width: 60%;    // landscape
+        @media @tablet { width: 80%;  } // landscape + tablet
+        @media @phone  { width: 100%; } // landscape + phone
+    }
+}
+@phone:     ~"(max-width: 480px)";
+@tablet:    ~"(min-width: 481px) and (max-width: 1024px)";
+@landscape: ~"(orientation: landscape)";
+
+
+
+// Careful not to overdo it!!! The following is *bad*.
+.widget {
+    display: block; float: left; height: 5em;
+    .widget--meta {
+        color: #333;
+        p  { font-family: sans-serif; }
+        h1 { font-family: serif;
+            span { display: inline-block; }
+            a    { text-decoration: none;
+                   position: relative;
+                   overflow: auto;
+                   > span, > i {  display: block; float: left; }
+            }
+        }
+    }
+}

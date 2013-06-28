@@ -1,0 +1,12 @@
+h1,
+h2 {
+  font-family: 'PTSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-indent: -99999px;
+}
+code,
+pre {
+  font-family: 'Menlo', "Monaco", "Courier New", monospace;
+}
+.graphic-element {
+  text-indent: -99999px;
+}

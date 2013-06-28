@@ -1,0 +1,24 @@
+.lazy-eval-scope {
+  width: 2em;
+}
+.mixin_with-arguments {
+  box-shadow: 2px 5px 1px #000000;
+  -moz-box-shadow: 2px 5px 1px #000000;
+  -webkit-box-shadow: 2px 5px 1px #000000;
+}
+.mixin_with-variable-args {
+  background-image: url('image.jpg');
+  background-repeat: no-repeat;
+  background-size: 100px 15px;
+}
+.uses-switched-mixin {
+  color: #3b3b3b;
+}
+.div-with-light-text {
+  color: #aaaaaa;
+  background-color: #333;
+}
+.div-with-dark-text {
+  color: #666666;
+  background-color: #aaa;
+}

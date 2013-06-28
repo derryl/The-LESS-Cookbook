@@ -1,0 +1,21 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+h1 {
+  font-family: "ProximaNova", Helvetica, Arial, sans-serif;
+}
+.el1 {
+  box-shadow: 0 1px 0 #fff;
+  -moz-box-shadow: 0 1px 0 #fff;
+  -webkit-box-shadow: 0 1px 0 #fff;
+}
+.el2 {
+  box-shadow: 0 1px 0 #ffffff;
+  -moz-box-shadow: 0 1px 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 #ffffff;
+}
+.el3 {
+  box-shadow: 0 1px 0 #ffffff;
+  -moz-box-shadow: 0 1px 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 #ffffff;
+}
